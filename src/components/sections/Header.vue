@@ -30,7 +30,7 @@
 
       <!-- Desktop utility buttons -->
       <div class="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-x-6">
-        <a href="#" class="text-sm font-semibold leading-6 text-[#0245A3] hover:text-blue-700 transition-colors">
+        <a href="#" class="inline-flex items-center justify-center rounded-lg bg-[#0245A3] px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#023B8A] transition-colors">
           Log in
         </a>
 

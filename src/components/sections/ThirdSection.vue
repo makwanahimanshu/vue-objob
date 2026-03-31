@@ -1,16 +1,16 @@
 <template>
   <section class="w-full py-12 font-poppins">
     <div class="max-w-[1240px] mx-auto px-6">
-      <div class="flex justify-between items-center">
-        <div class="leading-3">
-          <h1 class="text-[#0245A3] text-[40px] font-[1000] text-left uppercase pb-8 tracking-[0.50px]">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-0">
+        <div class="leading-tight">
+          <h1 class="text-[#0245A3] text-[28px] md:text-[40px] font-[1000] text-left uppercase pb-2 md:pb-8 tracking-[0.50px]">
             {{ getHired }}
           </h1>
-          <p class="text-black text-[25px] font-[500] text-left capitalize pb-8">
+          <p class="text-black text-[18px] md:text-[25px] font-[500] text-left capitalize pb-0 md:pb-8">
             {{ sponsoredCompanies }}
           </p>
         </div>
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-2 md:gap-4 w-full md:w-auto justify-between md:justify-end">
           <div class="border border-[#0245A3] rounded-[50%] bg-white cursor-pointer p-4">
             <img :src="leftArrowImg" alt="" class="h-[25px] w-[25px]" />
           </div>
@@ -18,12 +18,12 @@
             <img :src="rightArrowImg" alt="" class="h-[25px] w-[25px]" />
           </div>
           <button
-            class="bg-[#0245A3] text-white px-8 py-4 rounded-[12px] shadow-[0_5px_10px_rgba(19,99,223,.25)] hover:bg-white hover:border-[#0245A3] border-1 hover:text-[#0245A3] uppercase cursor-pointer font-[700]">
+            class="bg-[#0245A3] text-white px-6 md:px-8 py-3 md:py-4 rounded-[12px] shadow-[0_5px_10px_rgba(19,99,223,.25)] hover:bg-white border hover:border-[#0245A3] hover:text-[#0245A3] uppercase cursor-pointer font-[700] transition-colors ml-auto md:ml-0 text-sm md:text-base">
             {{ viewBtn }}
           </button>
         </div>
       </div>
-      <div class="grid grid-cols-2 gap-6 text-black leading-6 mt-2">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 text-black leading-6 mt-8 md:mt-2">
 
         <!-- card -->
         <Card v-for="(value, key) in myObject" :key="key" :company1Img="value.company1Img"

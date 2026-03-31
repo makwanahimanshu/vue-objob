@@ -1,17 +1,17 @@
 <template>
   <section class="w-full py-8 font-poppins">
-    <div class="max-w-[1240px] mx-auto px-6">
-      <h1 class="text-[#0245A3] text-[35px] font-[900] text-left uppercase pb-8 tracking-normal">
+    <div class="max-w-[1240px] mx-auto px-6 text-center md:text-left">
+      <h1 class="text-[#0245A3] text-[24px] md:text-[35px] font-[900] uppercase pb-8 tracking-normal">
         {{ findJobsByIndustries }}
       </h1>
-      <div class="grid grid-cols-4 gap-6 text-black leading-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-black leading-6">
         <div
-          class="p-6 border border-[#D9D9D9] rounded-[15px] shadow-[0_5px_10px_rgba(19,99,223,.25)] bg-[#EFEFEF] hover:bg-white hover:border-[#0245A3] hover:text-[#0245A3]"
+          class="p-6 border border-[#D9D9D9] rounded-[15px] shadow-[0_5px_10px_rgba(19,99,223,.25)] bg-[#EFEFEF] hover:bg-white hover:border-[#0245A3] hover:text-[#0245A3] transition-all"
          v-for="(job, index) in jobs" :key="index">
-          <div class="text-[22px] font-[700] uppercase text-left capitalize">
+          <div class="text-[18px] md:text-[22px] font-[700] uppercase text-center md:text-left">
             {{ job.title }}
           </div>
-          <p class="text-[16px] font-[500] text-left capitalize pt-3">{{ job.jobs }}</p>
+          <p class="text-[14px] md:text-[16px] font-[500] text-center md:text-left capitalize pt-3">{{ job.jobs }}</p>
         </div>
       </div>
     </div>

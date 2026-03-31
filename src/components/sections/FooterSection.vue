@@ -3,8 +3,8 @@
         <!-- Full width border -->
         <hr class="border-t border-[#0245A3] w-full pb-8" />
 
-        <div class="max-w-[1240px] mx-auto">
-            <div class="grid grid-cols-7 gap-1 text-black leading-6 mt-2">
+        <div class="max-w-[1240px] mx-auto px-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-4 text-black leading-6 mt-2 text-center sm:text-left">
                 <div>
                     <img :src="logo" alt="" class="h-[110px] w-[80px]" />
                 </div>
@@ -25,37 +25,31 @@
                 </div>
                 <div>
                     <h3 class="text-[16px] font-[600] text-black capitalize pb-4">Information</h3>
-                    <p>About Us</p>
-                    <p>Contact Us</p>
-                </div>
-                <div>
-
-                </div>
-                <div>
-
+                    <p class="cursor-pointer hover:text-[#0245A3] mb-1 hover:underline">About Us</p>
+                    <p class="cursor-pointer hover:text-[#0245A3] mb-1 hover:underline">Contact Us</p>
                 </div>
                 <div>
                     <h3 class="text-[16px] font-[600] text-black capitalize pb-4">Available on</h3>
-                    <div class="grid grid-cols-2">
-                        <div>
-                            <img :src="googlePlayImg" alt="" class="h-[50px] w-[50px] pb-1" />
-                            <p class="text-[15px] font-[400]">ISO</p>
+                    <div class="flex justify-center sm:justify-start gap-6 pb-2">
+                        <div class="flex flex-col items-center">
+                            <img :src="googlePlayImg" alt="" class="h-[40px] w-auto pb-1" />
+                            <p class="text-[14px] font-[500]">iOS</p>
                         </div>
-                        <div>
-                            <img :src="appStoreImg" alt="" class="h-[50px] w-[50px] pb-1" />
-                            <p class="text-[15px] font-[400]">Playstore</p>
+                        <div class="flex flex-col items-center">
+                            <img :src="appStoreImg" alt="" class="h-[40px] w-auto pb-1" />
+                            <p class="text-[14px] font-[500]">Playstore</p>
                         </div>
                     </div>
-                    <h3 class="text-[16px] font-[600] text-black capitalize pb-4 pt-3">Social media links</h3>
-                    <div class="grid grid-cols-3">
-                        <div>
-                            <img :src="linkedinImg" alt="" class="h-[30px] w-[30px] pb-1" />
+                    <h3 class="text-[16px] font-[600] text-black capitalize pb-4 pt-6">Social media links</h3>
+                    <div class="flex justify-center sm:justify-start gap-4">
+                        <div class="cursor-pointer hover:opacity-80 transition-opacity">
+                            <img :src="linkedinImg" alt="" class="h-[30px] w-[30px]" />
                         </div>
-                        <div>
-                            <img :src="facebookImg" alt="" class="h-[32px] w-[32px] pb-1" />
+                        <div class="cursor-pointer hover:opacity-80 transition-opacity">
+                            <img :src="facebookImg" alt="" class="h-[32px] w-[32px]" />
                         </div>
-                        <div>
-                            <img :src="twitterImg" alt="" class="h-[33px] w-[33px] pb-1" />
+                        <div class="cursor-pointer hover:opacity-80 transition-opacity">
+                            <img :src="twitterImg" alt="" class="h-[33px] w-[33px]" />
                         </div>
                     </div>
                 </div>

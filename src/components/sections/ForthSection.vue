@@ -1,18 +1,18 @@
 <template>
   <section class="w-full py-12 font-poppins">
     <div class="max-w-[1240px] mx-auto px-6">
-      <div class="flex justify-between items-center">
-        <div class="leading-3">
-          <h1 class="text-[#0245A3] text-[40px] font-[1000] text-left uppercase pb-8 tracking-[0.50px]">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-0">
+        <div class="leading-tight">
+          <h1 class="text-[#0245A3] text-[28px] md:text-[40px] font-[1000] text-left uppercase pb-2 md:pb-8 tracking-[0.50px]">
             {{ getTopCompanies }}
           </h1>
-          <p class="text-black text-[25px] font-[500] text-left capitalize pb-8">
+          <p class="text-black text-[18px] md:text-[25px] font-[500] text-left capitalize pb-0 md:pb-8">
             {{ organizationsActivelyHiring }}
           </p>
         </div>
-        <div class="flex items-center">
+        <div class="flex items-center w-full md:w-auto mt-4 md:mt-0 justify-start md:justify-end">
           <button
-            class="bg-[#0245A3] text-white px-8 py-4 rounded-[12px] shadow-[0_5px_10px_rgba(19,99,223,.25)] hover:bg-white hover:border-[#0245A3] border-1 hover:text-[#0245A3] uppercase cursor-pointer font-[700]">
+            class="bg-[#0245A3] text-white px-6 md:px-8 py-3 md:py-4 rounded-[12px] shadow-[0_5px_10px_rgba(19,99,223,.25)] hover:bg-white border hover:border-[#0245A3] hover:text-[#0245A3] uppercase cursor-pointer font-[700] transition-colors text-sm md:text-base">
             {{ viewAll }}
           </button>
         </div>
@@ -20,9 +20,9 @@
 
 
 
-      <div class="grid grid-cols-3 gap-6 text-black leading-6 mt-2">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-black leading-6 mt-8 md:mt-2">
         <!-- card -->
-        <div class="border-1 border-[#C6C6C6] rounded-[12px] hover:border-[#0245A3] h-[400px]"
+        <div class="border-1 border-[#C6C6C6] rounded-[12px] hover:border-[#0245A3] h-auto pb-4 transition-all"
           v-for="(value, key) in myObject">
 
 
@@ -45,15 +45,15 @@
 
                   <!-- Company Logo -->
                   <div class="border-4 border-[#0245A3] rounded-full 
-                    w-[130px] h-[130px] 
+                    w-[90px] h-[90px] lg:w-[130px] lg:h-[130px] 
                     overflow-hidden flex-shrink-0
-                    absolute -top-[60px] left-[8px] bg-white">
+                    absolute -top-[45px] lg:-top-[60px] left-[12px] lg:left-[8px] bg-white">
                     <img :src="value.company1Img" class="w-full h-full object-cover" />
                   </div>
 
                   <!-- Content -->
-                  <div class="pl-[145px]">
-                    <p class="text-[16px] font-[700] capitalize ellipsis w-[200px]">
+                  <div class="pl-[115px] lg:pl-[145px] pr-2 w-full pt-1 lg:pt-0">
+                    <p class="text-[15px] lg:text-[16px] font-[700] capitalize break-words w-full">
                       {{ value.companyName }}
                     </p>
 
@@ -79,17 +79,17 @@
                 lacinia risus neque egestas tempor. </p>
 
 
-              <div class="grid grid-cols-3 gap-3 pt-2 px-3">
-                <div class="text-[14px] font-[500] text-left capitalize text-[#5E5E5E] flex items-center gap-2" v-for="(item, index) in value.jobFamily">
-                    <img :src="item.img" alt="" class="h-[22px] w-[22px]" />
-                    {{ item.name }}
+              <div class="grid grid-cols-3 gap-1 lg:gap-3 pt-2 px-3">
+                <div class="text-[12px] lg:text-[14px] font-[500] text-left capitalize text-[#5E5E5E] flex items-center gap-1 lg:gap-2" v-for="(item, index) in value.jobFamily">
+                    <img :src="item.img" alt="" class="h-[18px] w-[18px] lg:h-[22px] lg:w-[22px]" />
+                    <span class="truncate">{{ item.name }}</span>
 
                   </div>
               </div>
 
-              <div class="grid grid-cols-3 gap-3 px-3">
-                <div class="text-[14px] font-[500] capitalize text-[#5E5E5E] flex items-center gap-2 ml-7" v-for="(item, index) in value.jobFamily">
-                    {{ item.name }}
+              <div class="grid grid-cols-3 gap-1 lg:gap-3 px-3">
+                <div class="text-[12px] lg:text-[14px] font-[500] capitalize text-[#5E5E5E] flex items-center gap-1 lg:gap-2 ml-5 lg:ml-7" v-for="(item, index) in value.jobFamily">
+                    <span class="truncate">{{ item.name }}</span>
                   </div>
               </div>
 

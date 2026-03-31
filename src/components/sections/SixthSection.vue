@@ -1,20 +1,20 @@
 <template>
     <section class="w-full py-12 font-poppins">
         <div class="max-w-[1240px] mx-auto px-6">
-            <div class="">
-                <div class="leading-3">
-                    <h1 class="text-[#0245A3] text-[40px] font-[700] text-left uppercase pb-8 tracking-[0.50px]">
+            <div class="flex flex-col text-center md:text-left">
+                <div class="leading-tight">
+                    <h1 class="text-[#0245A3] text-[28px] md:text-[40px] font-[700] uppercase pb-2 md:pb-8 tracking-[0.50px]">
                         {{ findJobs }}
                     </h1>
 
                 </div>
-                <div class="grid grid-cols-5 gap-3 pt-4 flex items-center">
-                    <div class="items-center gap-2 border-1 border-[#0245A3] rounded-[12px] p-4"
-                        v-for="(value, index) in myObject">
-                        <p class="text-black text-[16px] font-[700] hover:text-[#0245A3] cursor-pointer capitalize">{{
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-3 pt-8 md:pt-4">
+                    <div class="flex flex-col items-center md:items-stretch gap-2 border-1 border-[#0245A3] rounded-[12px] p-4 hover:shadow-lg transition-all"
+                        v-for="(value, index) in myObject" :key="index">
+                        <p class="text-black text-[16px] font-[700] hover:text-[#0245A3] cursor-pointer capitalize text-center md:text-left">{{
                             value.countryName }}</p>
-                        <div class="flex justify-center items-center py-10">
-                            <img :src="value.countryImg" alt="" class="h-[100px] w-[130px]" />
+                        <div class="flex justify-center items-center py-6 md:py-10">
+                            <img :src="value.countryImg" alt="" class="h-[100px] w-auto max-w-full object-contain" />
                         </div>
                         <div class="flex justify-between items-center gap-2 text-[16px] font-[500]">
                             <p>{{ value.noOfJobs }} jobs</p>
